@@ -3,10 +3,10 @@
 MAIN_PATH=$( cd "$( dirname "${BASH_SOURCE[0]}" )"; cd .. && pwd )
 source "$MAIN_PATH"/scripts/constants.sh
 #clean logs
-rm ~/hackathon/subdotnet_draft/logs/*.log
+rm ~/hackathon/subdotnet/logs/*.log
 # build subdotnet
 rm /tmp/subdotnet -r
-dotnet publish ~/hackathon/subdotnet_draft/src/subdotnet.csproj 
+dotnet publish ~/hackathon/subdotnet/src/subdotnet.csproj 
 #copy binary
 cp /tmp/subdotnet ${build_dir} -r
 #fixes problem with libgrpc_csharp_ext.x64.so shared library
